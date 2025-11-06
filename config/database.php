@@ -9,9 +9,9 @@ class Database {
             // Get all MySQL connection details from environment
             $host = getenv('MYSQLHOST') ?: 'mysql.railway.internal';
             $port = getenv('MYSQLPORT') ?: '3306';
-            $database = getenv('MYSQLDATABASE') ?: 'real_estate_management';
+            $database = getenv('MYSQLDATABASE') ?: 'railway';
             $username = getenv('MYSQLUSER') ?: 'root';
-            $password = getenv('MYSQLPASSWORD') ?: 'kMoDqjGAhbHCuRXrkOQcTQizechnbzlI';
+            $password = getenv('MYSQLPASSWORD') ?: 'TopjJThFOXjwZnpEATjRgOQfgXdqLRLN';
 
             $dsn = "mysql:host={$host};port={$port};dbname={$database};charset=utf8mb4";
             
@@ -32,3 +32,4 @@ class Database {
     }
 }
 ?>
+
