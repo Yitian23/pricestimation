@@ -22,6 +22,9 @@ COPY . /var/www/html/
 RUN if [ -f requirements.txt ]; then pip3 install --no-cache-dir -r requirements.txt; fi
 RUN if [ -f python/requirements.txt ]; then pip3 install --no-cache-dir -r python/requirements.txt; fi
 
+# Make Python scripts executable
+RUN find /var/www/html -name "*.py" -type f -exec chmod +x {} \;
+
 # Enable Apache mod_rewrite
 RUN a2enmod rewrite
 
