@@ -1,0 +1,15 @@
+{
+  "require": {
+    "php": "^8.0",
+    "ext-mysqli": "*",
+    "ext-curl": "*",
+    "ext-json": "*",
+    "phpmyadmin/phpmyadmin": "^5.0"
+  },
+  "scripts": {
+    "post-install-cmd": [
+      "cp -r vendor/phpmyadmin/phpmyadmin/* public/",
+      "cp config.inc.php public/"
+    ]
+  }
+}
