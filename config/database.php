@@ -11,7 +11,7 @@ class Database {
             $port = getenv('MYSQLPORT') ?: '3306';
             $database = getenv('MYSQLDATABASE') ?: 'real_estate_management';
             $username = getenv('MYSQLUSER') ?: 'root';
-            $password = getenv('MYSQLPASSWORD') ?: 'hMANrZFTAmMpbLbRpnhPAUugNudtPEZl';
+            $password = getenv('MYSQLPASSWORD') ?: 'kMoDqjGAhbHCuRXrkOQcTQizechnbzlI';
 
             $dsn = "mysql:host={$host};port={$port};dbname={$database};charset=utf8mb4";
             
