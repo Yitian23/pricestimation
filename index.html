@@ -40,6 +40,9 @@
   </div>
 
   <script>
+  const baseURL = window.location.origin;
+  const API_BASE = `${baseURL}`;
+    
    function login() {
     const usernameInput = document.getElementById("username").value.trim();
     const passwordInput = document.getElementById("password").value.trim();
@@ -60,7 +63,7 @@
     formData.append('password', passwordInput);
 
     // Send AJAX request to PHP backend
-    fetch('login.php', {
+    fetch('${baseURL}php/login.php', {
         method: 'POST',
         body: formData
     })
